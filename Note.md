@@ -73,3 +73,19 @@
   - 新版本提供 `hideBelow` 和 `hideFrom` 属性
     - `hideBelow="sm"`：在 sm 以下隐藏
     - `hideFrom="md"`：从 md 开始隐藏
+
+## 5. 初步设置导航栏
+
+**组件结构：**
+
+- 创建 `src/components/NavBar.tsx` 组件
+- 使用 Chakra UI 的 `HStack` 进行水平布局
+- 添加项目 logo 图片（60px 尺寸）
+- 显示导航栏文本标识
+
+**实现要点：**
+
+- 导入 logo 图片资源：`import logo from "../assets/logo.webp"`
+- 使用 `HStack` 组件实现水平排列
+- 使用 `Image` 组件显示 logo，设置 `boxSize="60px"`
+- 使用 `Text` 组件显示导航栏文本
