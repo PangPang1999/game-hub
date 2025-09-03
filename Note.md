@@ -69,10 +69,14 @@
 - 使用 **templateAreas** 定义不同屏幕尺寸下的布局区域
 - 控制组件显示/隐藏：
 
-  - 旧版本通过 `show` 和 `above`，现已废除
-  - 新版本提供 `hideBelow` 和 `hideFrom` 属性
+  - 旧版本（v2）通过 `show` 和 `above`，现已废除
+  - 新版本（v3）每个组件都提供 `hideBelow` 和 `hideFrom` 属性
     - `hideBelow="sm"`：在 sm 以下隐藏
     - `hideFrom="md"`：从 md 开始隐藏
+
+**参考地址**
+
+- [Chakra 相应式布局官方文档](https://chakra-ui.com/docs/styling/responsive-design)
 
 ## 5. 初步设置导航栏
 
@@ -89,3 +93,27 @@
 - 使用 `HStack` 组件实现水平排列
 - 使用 `Image` 组件显示 logo，设置 `boxSize="60px"`
 - 使用 `Text` 组件显示导航栏文本
+
+## 6. 设置黑暗/明亮主题切换
+
+**功能实现：**
+
+- 在导航栏右侧添加主题切换开关
+- 支持明亮/黑暗模式动态切换
+- 使用 Switch 组件替代传统的 IconButton 按钮
+
+**技术要点：**
+
+- 使用 `useColorMode` Hook 管理主题状态
+- 创建独立的 `ColorModeSwitch` 组件
+- 使用 Chakra UI v3 的 Switch 组件结构
+- 设置绿色主题色 `colorPalette="green"`
+- 通过 `checked` 属性绑定当前主题状态
+- 使用 `onCheckedChange` 处理切换事件
+
+**实现说明：**
+
+- 文档地址：https://chakra-ui.com/docs/components/concepts/color-mode
+- Vite 项目为纯客户端渲染（CSR），无需使用 `ClientOnly` 组件
+- Chakra UI v3 中 Switch 组件的 API 结构有所调整
+- 原始样式有限，Switch 开关模式提供更好的用户体验
